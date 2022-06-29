@@ -1,6 +1,6 @@
 {
   "name": "little-star-connect",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "a api generate cli",
   "main": "./lib/cli.js",
   "bin": {

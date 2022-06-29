@@ -2,7 +2,7 @@
 
 - how to use
 ```
-npm i little-star-connect
+npm i little-star-connect -g 
 
 otterf
 
