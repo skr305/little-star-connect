@@ -1,2 +1,8 @@
+
 node_modules
-cli.txt
+
+# ignore cli.md(a doc for plan)
+cli.md
+
+# split.js is a exercise for myself
+split.js
