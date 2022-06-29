@@ -1,8 +1,16 @@
 ### a CLI util to generate doc-like api.ts file 
 
+- how to use
+```
+npm i little-star-connect
+
+otterf
+
+```
 - how to run in dev-environment
 
 ```
+
 git clone git@github.com:skr305/little-star-connect.git
 
 npm i

@@ -1,10 +1,10 @@
 {
   "name": "little-star-connect",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "a api generate cli",
   "main": "./lib/cli.js",
   "bin": {
-    "otterh": "bin/otterh.js"
+    "otter-dog": "bin/otter-dog.js"
   },
   "repository": {
     "type": "git",
