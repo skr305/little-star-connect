@@ -1,0 +1,1 @@
+ts-node ../src/cli.ts yield --r ../benchmark/api.dog ../benchmark
