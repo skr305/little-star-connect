@@ -1,0 +1,16 @@
+
+__test__
+benchmark
+src
+
+# the ignore file shouldn't be uploaded
+.gitignore
+.npmignore
+
+node_modules
+cli.md
+split.js
+tsconfig.json
+
+
+.vscode

@@ -1,10 +1,20 @@
 {
   "name": "little-star-connect",
-  "version": "0.0.3",
+  "version": "0.2.1",
   "description": "a api generate cli",
-  "main": "index.js",
+  "main": "./lib/cli.js",
+  "bin": {
+    "otterh": "bin/otterh.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skr305/little-star-connect"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "help": "ts-node ./src/cli.ts",
+    "dev": "ts-node ./src/cli.ts yield --r ./benchmark/api.dog ./benchmark",
+    "build:lib": "tsc"
   },
   "keywords": [
     "node.js",
@@ -24,6 +34,7 @@
     "typescript": "^4.2.4",
     "@types/react": "^18.0.14",
     "react": "^18.2.0",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "tslib": "^2.4.0"
   }
 }

@@ -1,4 +1,4 @@
-import compileMapToAst from "../compile-map-ast"
+import compileMapToAst from "../src/compile-map-ast"
 import { join } from 'path' 
 import fs from 'fs'
 

@@ -11,8 +11,8 @@
 import fs from 'fs'
 import { join } from 'path';
 import chalk from 'chalk';
-import REACT_HOOK_GENERATOR_CONTENT, { REACT_HOOK_IMPORT_CONTENT } from './react-hook-template';
-import VUE_HOOK_GENERATOR_CONTNET, { VUE_HOOK_IMPORT_CONTENT } from './vue-hook-template';
+import REACT_HOOK_GENERATOR_CONTENT, { REACT_HOOK_IMPORT_CONTENT } from './tpl/react-hook-template';
+import VUE_HOOK_GENERATOR_CONTNET, { VUE_HOOK_IMPORT_CONTENT } from './tpl/vue-hook-template';
 import { Command } from 'commander'
 import OtterError, { ErrorCode } from './otter-error'
 import compileMapToAst, { MapAst } from './compile-map-ast';

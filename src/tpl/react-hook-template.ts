@@ -1,46 +1,19 @@
-### a CLI util to generate doc-like api.ts file 
-
-- how to run in dev-environment
-
-```
-git clone git@github.com:skr305/little-star-connect.git
-
-npm i
-
-npm run dev
-
-```
-
-+ by ts-node cli.ts yield, you can generate ```api.ts``` by set options 
-
-+ based on ```commander```, you can use ```npm run help``` to get help
-
-
-- by write a *.dog file like
-
-```
-    login  { id, pwd }  { id, avatar, nick } 
-    reg  { r_id, r_pwd }  { n_id, n_nick } 
-``` 
-
-- can generate react/vue hooks to fetch data easily ( by the -r/-v options )
-
-- the result is like ( including some usable hooks )
-
-```ts
 
 /**
  * 
- * @file react-hook生成的模板参照
+ * @file react-hook生成的模版
  * @author otterh
- * @date 2022-06-28 23:51
- * 
+ * @date 2022-06-28 23:43
  */
 
- import { useState } from 'react'
+ import { HOOK_SECTION_MARK, HOOK_GENERATOR_MARK } from '../constants/fetch-hook-mark';
 
+ export const REACT_HOOK_IMPORT_CONTENT = `import { useState } from 'react'\n`
+
+ 
+ const REACT_HOOK_GENERATOR_CONTNET = `
  // 默认OK代表成功处理请求
- enum AppErrorCode {
+ export enum AppErrorCode {
      
      OK = 0,
      
@@ -51,22 +24,15 @@ npm run dev
  }
  
  // 作为App中Error的标准格式
- type AppError< T = any > = {
+ export type AppError< T = any > = {
      message: string
      data: T
      errorCode: AppErrorCode
  }
  
  // 需要注入的fetch类型
- type OtterFetch = <P, R>( url: string, params: P ) => Promise< AppError<R> >
+ export type OtterFetch = <P, R>( url: string, params: P ) => Promise< AppError<R> >
  
- // 作为模板的一个api元信息 
- // 无实际意义
- type LoginParams = { id: string }
- 
- type LoginResponse = { avatar: Buffer }
- 
- const LoginURL = "/login"
  
  /**
   * 
@@ -74,7 +40,7 @@ npm run dev
   * @param _fetch 请求方法
   * @returns 生成的针对该接口的hook
   */
- const hookGenerator = < P, R >( url: string, _fetch: OtterFetch ) => {
+ export const hookGenerator = < P, R >( url: string, _fetch: OtterFetch ) => {
      
     /**
      * @param params 注入的请求参数
@@ -124,17 +90,19 @@ npm run dev
  }
  
  // 生成的hook的类型
- type OtterHookType< P, R > = ReturnType< typeof hookGenerator< P, R > > 
+ export type OtterHookType< P, R > = ReturnType< typeof hookGenerator< P, R > > 
  
  export default class VueFetchHook {
  
      public _fetch: OtterFetch
-     public useLogin: OtterHookType< LoginParams, LoginResponse >
+     ${ HOOK_SECTION_MARK }
  
      constructor( _fetch: OtterFetch ) {
          this._fetch = _fetch
-         this.useLogin = hookGenerator< LoginParams, LoginResponse >( LoginURL, this._fetch )
+         ${ HOOK_GENERATOR_MARK }
      }
  
  }
-```
+ `
+
+export default REACT_HOOK_GENERATOR_CONTNET

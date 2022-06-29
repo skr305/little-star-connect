@@ -1,0 +1,2 @@
+export declare const HOOK_SECTION_MARK = "/** REPLACED BY FETCH_HOOK_SECTION */";
+export declare const HOOK_GENERATOR_MARK = "/** REPLACED BY FETCH_HOOK_GENERATOR */";
