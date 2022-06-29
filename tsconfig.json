@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "module": "CommonJS",
+      "lib": ["esnext", "dom", "dom.iterable"],
+      "moduleResolution": "Node",
+      "strict": true,
+      "outDir": "./build",
+      "target": "ESNext",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "resolveJsonModule": true,
+      "allowJs": true
+    },
+    "exclude": ["node_modules"]
+  }

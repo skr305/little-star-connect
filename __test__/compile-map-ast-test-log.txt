@@ -1,0 +1,1 @@
+[{"path":"login","params":["id","name","dog"],"response":["cache","avatar","nick"]},{"path":"reg","params":["id","pwd","nick"],"response":["cache","man"]}]

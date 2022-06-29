@@ -1,0 +1,29 @@
+{
+  "name": "little-star-connect",
+  "version": "0.0.3",
+  "description": "a api generate cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "typescript",
+    "cli"
+  ],
+  "author": "otterh",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/node": "^18.0.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.2.4",
+    "@types/react": "^18.0.14",
+    "react": "^18.2.0",
+    "vue": "^3.2.37"
+  }
+}

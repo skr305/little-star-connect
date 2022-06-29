@@ -1,0 +1,2 @@
+login  { id, pwd }  { id, avatar, nick } 
+reg  { r_id, r_pwd }  { n_id, n_nick } 
