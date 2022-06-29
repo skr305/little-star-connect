@@ -15,6 +15,7 @@ npm run dev
 
 + based on ```commander```, you can use ```npm run help``` to get help
 
++ use ```.\scripts\ci``` or ```./scripts/ci.sh``` to integration
 
 - by write a *.dog file like
 
