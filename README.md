@@ -7,6 +7,15 @@ npm i little-star-connect -g
 otterf
 
 ```
+
+##### or 
+
+```
+npm i little-star-connect 
+
+npx otterf
+
+```
 - how to run in dev-environment
 
 ```
